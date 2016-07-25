@@ -44,4 +44,12 @@ NAME = BLOCKS
 # So actually we can make a var with assignment
 V: foo << BLOCKS
 
+# V has memory management strategies, in default it will be [DYNAMIC][FUNCTION]
+# Which means it's static, but it will be auto released as the function is ended
+# Others are:
+[FUNCTION] # FUNCTION wide
+[GLOBAL] # global wide
 
+[STATIC] # keeps the value until program stops
+[DYNAMIC] # dispose the value ASAP
+[USR] # memory managed by users
