@@ -1,0 +1,47 @@
+#  SKATE LANG
+
+P: NAME
+Program: NAME
+#  Define the program name
+# ========================
+#  The entrance of a whole program must use program name ENTRY
+#  A runable S-Lang program could consists multiple Programs
+
+S: NAME
+Space: NAME
+#  Define a namespace, using NAME:NAME to call
+#  You can connect it to mainspace use Connect:
+#  This connection can be simplified as:
+SKATE: NAME
+
+C: IDENTIFIER, BLOCKS
+Connect: IDENTIFIER, BLOCKS
+#  You can connect all blocks into main space of a program by
+#     C: MAINSPACE->ANY PROGRAM->ALL
+#  In default, mainspace will be connected to S-LANG Skatetime (Runtime)
+
+
+B: NAME
+Blocks: NAME
+# Blocks without names
+B:
+Blocks:
+# End of a block
+B!
+Blocks!
+# Construct a block in one line
+B< SOMETHING >
+
+V: NAME
+Vars: NAME
+# examples:
+# V: foo
+# V: foo bar
+NAME << BLOCKS
+# Copy one block into NAME
+NAME = BLOCKS
+# Assign a block into NAME
+# So actually we can make a var with assignment
+V: foo << BLOCKS
+
+
