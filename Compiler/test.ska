@@ -1,0 +1,7 @@
+P: Entry
+
+B: mymain
+	puts "Hello World"
+B!
+
+C: MAINSPACE.entry mymain
